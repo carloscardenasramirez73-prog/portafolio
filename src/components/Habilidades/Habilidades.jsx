@@ -2,14 +2,78 @@ import './Habilidades.css';
 
 const Habilidades = () => {
   const skillsData = [
-    { id: 1, titulo: "Python & Data Science", descripcion: "Pandas, NumPy, Scikit-Learn, TensorFlow, OpenCV, MediaPipe.", nivel: "Avanzado", botonTexto: "VER PROYECTO", estado: "completado" },
-    { id: 2, titulo: "React & JavaScript", descripcion: "React, Vite, JSX, Hooks, CSS Grid, Flexbox, Vercel.", nivel: "Avanzado", botonTexto: "VER PROYECTO", estado: "completado" },
-    { id: 3, titulo: "Java & Android Native", descripcion: "Android Studio, SQLite, RecyclerView, Java, Git.", nivel: "Intermedio", botonTexto: "VER PROYECTO", estado: "completado" },
-    { id: 4, titulo: "Arduino & Electronics", descripcion: "C++, Teclados matriciales, Pantallas LCD, Sensores ultrasónicos.", nivel: "Intermedio", botonTexto: "VER PROYECTO", estado: "completado" },
-    { id: 5, titulo: "SQL & Databases", descripcion: "MySQL, PostgreSQL, SQLite, Consultas y Modelado de datos.", nivel: "Avanzado", botonTexto: "VER PROYECTO", estado: "completado" },
-    { id: 6, titulo: "WordPress & Web Forms", descripcion: "Fluent Forms, CSS Personalizado, Lógica Condicional.", nivel: "Experto", botonTexto: "VER PROYECTO", estado: "completado" },
-    { id: 7, titulo: "R & Statistical Modeling", descripcion: "RStudio, Regresión Lineal, Matrices de Correlación.", nivel: "Intermedio", botonTexto: "VER PROYECTO", estado: "completado" },
-    { id: 8, titulo: "Git & GitHub", descripcion: "Control de versiones, Gestión de ramas, Resolver conflictos.", nivel: "Avanzado", botonTexto: "VER PROYECTO", estado: "completado" }
+    { 
+      id: 1, 
+      titulo: "Python & Data Science", 
+      descripcion: "Pandas, NumPy, Scikit-Learn, TensorFlow, OpenCV, MediaPipe.", 
+      nivel: "Avanzado", 
+      botonTexto: "VER PROYECTO", 
+      link: "#", 
+      estado: "completado" 
+    },
+    { 
+      id: 2, 
+      titulo: "React & JavaScript", 
+      descripcion: "React, Vite, JSX, Hooks, CSS Grid, Flexbox, Vercel.", 
+      nivel: "Avanzado", 
+      botonTexto: "VER PROYECTO", 
+      link: "#", 
+      estado: "completado" 
+    },
+    { 
+      id: 3, 
+      titulo: "Java & Android Native", 
+      descripcion: "Android Studio, SQLite, RecyclerView, Java, Git.", 
+      nivel: "Intermedio", 
+      botonTexto: "VER PROYECTO", 
+      link: "#", 
+      estado: "completado" 
+    },
+    { 
+      id: 4, 
+      titulo: "Arduino & Electronics", 
+      descripcion: "C++, Teclados matriciales, Pantallas LCD, Sensores ultrasónicos.", 
+      nivel: "Intermedio", 
+      botonTexto: "VER PROYECTO", 
+      link: "https://www.tinkercad.com/users/h8M4DUGKje7?type=circuits", // Enlace a Tinkercad
+      estado: "completado" 
+    },
+    { 
+      id: 5, 
+      titulo: "SQL & Databases", 
+      descripcion: "MySQL, PostgreSQL, SQLite, Consultas y Modelado de datos.", 
+      nivel: "Avanzado", 
+      botonTexto: "VER PROYECTO", 
+      link: "#", 
+      estado: "completado" 
+    },
+    { 
+      id: 6, 
+      titulo: "WordPress & Web Forms", 
+      descripcion: "Fluent Forms, CSS Personalizado, Lógica Condicional.", 
+      nivel: "Experto", 
+      botonTexto: "VER PROYECTO", 
+      link: "#", 
+      estado: "completado" 
+    },
+    { 
+      id: 7, 
+      titulo: "R & Statistical Modeling", 
+      descripcion: "RStudio, Regresión Lineal, Matrices de Correlación.", 
+      nivel: "Intermedio", 
+      botonTexto: "VER PROYECTO", 
+      link: "#", 
+      estado: "completado" 
+    },
+    { 
+      id: 8, 
+      titulo: "Git & GitHub", 
+      descripcion: "Control de versiones, Gestión de ramas, Resolver conflictos.", 
+      nivel: "Avanzado", 
+      botonTexto: "VER PROYECTO", 
+      link: "https://github.com/carloscardenasramirez73-prog", 
+      estado: "completado" 
+    }
   ];
 
   return (
@@ -26,9 +90,15 @@ const Habilidades = () => {
                     <line x1="9" y1="21" x2="9" y2="9"></line>
                   </svg>
                 </div>
-                <span className="skill-badge badge-green">
+                {/* Convertido a etiqueta <a> para redirigir al enlace */}
+                <a 
+                  href={skill.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="skill-badge badge-green"
+                >
                   {skill.botonTexto}
-                </span>
+                </a>
               </div>
               <div className="skill-body">
                 <h3 className="skill-title">{skill.titulo}</h3>

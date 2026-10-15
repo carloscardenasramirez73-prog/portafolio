@@ -6,9 +6,9 @@ const Proyectos = () => {
       id: 1,
       imagen: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80",
       titulo: "Cotizador Web Internacional - KML Logistics",
-      descripcion: "Sistema web interativo para cotización de fletes internacionales y exportaciones con lógica condicional en WordPress y Fluent Forms.",
+      descripcion: "Sistema web interactivo para cotización de fletes internacionales y exportaciones con lógica condicional en WordPress y Fluent Forms.",
       tecnologias: ["WordPress", "Fluent Forms", "JavaScript", "CSS3", "PHP"],
-      linkDemo: "#",
+      linkDemo: "https://kmlsac.com/",
       linkCodigo: "#"
     },
     {
@@ -35,7 +35,7 @@ const Proyectos = () => {
       titulo: "Sistema de Seguridad Arduino con Keypad & LCD",
       descripcion: "Prototipo de cerradura electrónica codificada en C++ con teclado matricial, pantalla LCD, sensor de distancia y zumbador.",
       tecnologias: ["Arduino", "C++", "Tinkercad", "Electronics"],
-      linkDemo: "#",
+      linkDemo: "https://www.tinkercad.com/things/4VTY7jWNrd9-trabajo-final", // URL de tu Tinkercad
       linkCodigo: "#"
     }
   ];
