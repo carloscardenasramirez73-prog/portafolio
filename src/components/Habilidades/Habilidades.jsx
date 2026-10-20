@@ -6,7 +6,7 @@ const Habilidades = () => {
       id: 1, 
       titulo: "Python & Data Science", 
       descripcion: "Pandas, NumPy, Scikit-Learn, TensorFlow, OpenCV, MediaPipe.", 
-      nivel: "Avanzado", 
+      nivel: "Intermedio", 
       botonTexto: "VER PROYECTO", 
       link: "#", 
       estado: "completado" 
@@ -15,7 +15,7 @@ const Habilidades = () => {
       id: 2, 
       titulo: "React & JavaScript", 
       descripcion: "React, Vite, JSX, Hooks, CSS Grid, Flexbox, Vercel.", 
-      nivel: "Avanzado", 
+      nivel: "Intermedio", 
       botonTexto: "VER PROYECTO", 
       link: "#", 
       estado: "completado" 
@@ -42,7 +42,7 @@ const Habilidades = () => {
       id: 5, 
       titulo: "SQL & Databases", 
       descripcion: "MySQL, PostgreSQL, SQLite, Consultas y Modelado de datos.", 
-      nivel: "Avanzado", 
+      nivel: "Intermedio", 
       botonTexto: "VER PROYECTO", 
       link: "#", 
       estado: "completado" 
@@ -51,9 +51,9 @@ const Habilidades = () => {
       id: 6, 
       titulo: "WordPress & Web Forms", 
       descripcion: "Fluent Forms, CSS Personalizado, Lógica Condicional.", 
-      nivel: "Experto", 
+      nivel: "Intermedio", 
       botonTexto: "VER PROYECTO", 
-      link: "#", 
+      link: "https://kmlsac.com/quote-online/", 
       estado: "completado" 
     },
     { 
@@ -69,7 +69,7 @@ const Habilidades = () => {
       id: 8, 
       titulo: "Git & GitHub", 
       descripcion: "Control de versiones, Gestión de ramas, Resolver conflictos.", 
-      nivel: "Avanzado", 
+      nivel: "Intermedio", 
       botonTexto: "VER PROYECTO", 
       link: "https://github.com/carloscardenasramirez73-prog", 
       estado: "completado" 

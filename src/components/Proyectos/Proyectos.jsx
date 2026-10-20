@@ -1,4 +1,6 @@
 import './Proyectos.css';
+import tinkercadImg from '../../assets/tinkercad.png';
+import gestionTareasImg from '../../assets/gestion_de_tareas.png'; // Importamos la nueva imagen
 
 const Proyectos = () => {
   const proyectosData = [
@@ -8,7 +10,7 @@ const Proyectos = () => {
       titulo: "Cotizador Web Internacional - KML Logistics",
       descripcion: "Sistema web interactivo para cotización de fletes internacionales y exportaciones con lógica condicional en WordPress y Fluent Forms.",
       tecnologias: ["WordPress", "Fluent Forms", "JavaScript", "CSS3", "PHP"],
-      linkDemo: "https://kmlsac.com/",
+      linkDemo: "#",
       linkCodigo: "#"
     },
     {
@@ -22,20 +24,20 @@ const Proyectos = () => {
     },
     {
       id: 3,
-      imagen: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80",
+      imagen: gestionTareasImg, // Usamos la imagen local de gestión de tareas
       titulo: "Task Manager Android App",
       descripcion: "Aplicación móvil nativa para la gestión de tareas con almacenamiento local SQLite, RecyclerView y workflows en Git.",
       tecnologias: ["Java", "Android Studio", "SQLite", "Git"],
-      linkDemo: "#",
-      linkCodigo: "#"
+      linkDemo: "https://drive.google.com/file/d/1SjhBzE9Y5sf5EEcjZOLnNAbue9C3iqsK/view?usp=sharing",
+      linkCodigo: "https://github.com/esmeralda25cr/appTareas"
     },
     {
       id: 4,
-      imagen: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+      imagen: tinkercadImg, // Usamos la imagen local de Tinkercad
       titulo: "Sistema de Seguridad Arduino con Keypad & LCD",
       descripcion: "Prototipo de cerradura electrónica codificada en C++ con teclado matricial, pantalla LCD, sensor de distancia y zumbador.",
       tecnologias: ["Arduino", "C++", "Tinkercad", "Electronics"],
-      linkDemo: "https://www.tinkercad.com/things/4VTY7jWNrd9-trabajo-final", // URL de tu Tinkercad
+      linkDemo: "https://www.tinkercad.com/things/4VTY7jWNrd9-trabajo-final",
       linkCodigo: "#"
     }
   ];

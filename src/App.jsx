@@ -3,6 +3,7 @@ import Banner from './components/Banner/Banner';
 import Perfil from './components/Perfil/Perfil';
 import Habilidades from './components/Habilidades/Habilidades';
 import Proyectos from './components/Proyectos/Proyectos';
+import Certificados from './components/Certificado/Certificado';
 import Contacto from './components/Contacto/Contacto';
 import './App.css';
 import './index.css';
@@ -15,6 +16,7 @@ function App() {
       <Perfil />
       <Habilidades />
       <Proyectos />
+      <Certificados />
       <Contacto />
     </>
   );
