@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 import './Contacto.css';
 
 const Contacto = () => {
@@ -8,6 +10,8 @@ const Contacto = () => {
     mensaje: ''
   });
 
+  const [cargando, setCargando] = useState(false);
+
   const manejarCambio = (e) => {
     const { name, value } = e.target;
     setFormulario({
@@ -16,10 +20,47 @@ const Contacto = () => {
     });
   };
 
-  const manejarEnvio = (e) => {
+  const manejarEnvio = async (e) => {
     e.preventDefault();
-    alert(`¡Gracias por tu mensaje, ${formulario.nombre}! Te responderé pronto.`);
-    setFormulario({ nombre: '', email: '', mensaje: '' });
+    setCargando(true);
+
+    try {
+      const templateParams = {
+        nombre: formulario.nombre,
+        email: formulario.email,
+        mensaje: formulario.mensaje
+      };
+
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
+
+      Swal.fire({
+        title: '¡Mensaje Enviado!',
+        text: 'Gracias por contactarme. Te responderé a la brevedad.',
+        icon: 'success',
+        confirmButtonColor: '#00d8ff',
+        background: '#111a2e',
+        color: '#ffffff'
+      });
+
+      setFormulario({ nombre: '', email: '', mensaje: '' });
+    } catch (error) {
+      console.error('Error al enviar el mensaje:', error);
+      Swal.fire({
+        title: 'Error',
+        text: 'Hubo un problema al enviar el mensaje. Inténtalo más tarde.',
+        icon: 'error',
+        confirmButtonColor: '#00d8ff',
+        background: '#111a2e',
+        color: '#ffffff'
+      });
+    } finally {
+      setCargando(false);
+    }
   };
 
   return (
@@ -43,7 +84,7 @@ const Contacto = () => {
                 </div>
                 <div>
                   <span className="item-label">Email</span>
-                  <p className="item-text">carlos.cardenas@senati.pe</p>
+                  <p className="item-text">carloscardenasramirez73@gmail.com</p>
                 </div>
               </div>
 
@@ -74,6 +115,7 @@ const Contacto = () => {
                   onChange={manejarCambio}
                   placeholder="Tu nombre"
                   required
+                  disabled={cargando}
                 />
               </div>
 
@@ -87,6 +129,7 @@ const Contacto = () => {
                   onChange={manejarCambio}
                   placeholder="tu@email.com"
                   required
+                  disabled={cargando}
                 />
               </div>
 
@@ -100,10 +143,13 @@ const Contacto = () => {
                   placeholder="Cuéntame sobre tu propuesta o proyecto..."
                   rows="5"
                   required
+                  disabled={cargando}
                 ></textarea>
               </div>
 
-              <button type="submit" className="btn-submit">Enviar Mensaje</button>
+              <button type="submit" className="btn-submit" disabled={cargando}>
+                {cargando ? 'Enviando...' : 'Enviar Mensaje'}
+              </button>
             </form>
           </div>
 
