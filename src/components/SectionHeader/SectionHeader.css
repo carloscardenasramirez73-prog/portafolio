@@ -1,0 +1,65 @@
+.section-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #00ff66;
+  margin-bottom: 1rem;
+}
+
+.eyebrow-num {
+  font-family: 'Courier New', monospace;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid rgba(0, 255, 102, 0.4);
+  border-radius: 6px;
+  background: rgba(0, 255, 102, 0.08);
+}
+
+.eyebrow-line {
+  width: 36px;
+  height: 1px;
+  background: linear-gradient(90deg, #00ff66, transparent);
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.8rem;
+  line-height: 1.15;
+}
+
+.section-subtitle {
+  color: #8b95a1;
+  max-width: 560px;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.section-underline {
+  display: block;
+  width: 70px;
+  height: 4px;
+  margin-top: 1.4rem;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #00ff66, #00d8ff);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.8s ease 0.4s;
+}
+
+.reveal.visible .section-underline {
+  transform: scaleX(1);
+}
